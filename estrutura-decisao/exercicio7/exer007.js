@@ -3,11 +3,30 @@ function verifcarMenorNumero() {
   let numero2 = document.getElementById("num2").value;
   let numero3 = document.getElementById("num3").value;
 
-  if (numero1 < numero2) {
+  if (Number(numero1) > Number(numero2) && Number(numero1) > Number(numero3)) {
+    console.log(`numero ${numero1} e o maior`);
+  } else if (
+    Number(numero2) > Number(numero1) &&
+    Number(numero2) > Number(numero3)
+  ) {
+    console.log(`numero ${numero2} e o maior`);
+  } else if (
+    Number(numero3) > Number(numero1) &&
+    Number(numero3) > Number(numero2)
+  ) {
+    console.log(`numero ${numero3} e o maior`);
+  }
+  if (Number(numero1) < Number(numero2) && Number(numero1) < Number(numero3)) {
     console.log(`numero ${numero1} e o menor`);
-  } else if (numero2 < numero1) {
+  } else if (
+    Number(numero2) < Number(numero1) &&
+    Number(numero2) < Number(numero3)
+  ) {
     console.log(`numero ${numero2} e o menor`);
-  } else if (numero3 < numero2) {
+  } else if (
+    Number(numero3) < Number(numero1) &&
+    Number(numero3) < Number(numero2)
+  ) {
     console.log(`numero ${numero3} e o menor`);
   }
 }

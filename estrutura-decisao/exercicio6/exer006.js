@@ -3,11 +3,17 @@ function verificarMaiorNumero() {
   let numero2 = document.getElementById("num2").value;
   let numero3 = document.getElementById("num3").value;
 
-  if (numero1 > numero2 && numero2 < numero1) {
+  if (Number(numero1) > Number(numero2) && Number(numero2) < Number(numero1)) {
     console.log(`numero ${numero1} e o maior`);
-  } else if (numero2 > numero1 && numero1 < numero2) {
+  } else if (
+    Number(numero2) > Number(numero1) &&
+    Number(numero1) < Number(numero2)
+  ) {
     console.log(`numero ${numero2} e o maior`);
-  } else if (numero3 > numero2 && numero2 < numero3) {
+  } else if (
+    Number(numero3) > Number(numero2) &&
+    Number(numero2) < Number(numero3)
+  ) {
     console.log(`numero ${numero3} e o maior`);
   }
 }
