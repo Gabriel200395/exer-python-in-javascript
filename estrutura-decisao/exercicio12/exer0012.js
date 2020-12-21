@@ -34,7 +34,7 @@ function descontoIr(
   descFgts
 ) {
   if (salario <= 900) {
-    console.log("não tera desconto");
+    criarElemento(salario);
   } else if (salario > 900 && salario <= 1500) {
     let calcularDesconto = Number(des1500) * Number(salario);
     let descontInss = Number(descInss) * Number(salario);
@@ -95,16 +95,17 @@ function criarElemento(
   pagamento
 ) {
   let resposta = document.getElementById("res");
-  resposta.innerHTML = ` Salário Bruto: ${salario}
+  let output = "Não tera descontos";
+  resposta.innerHTML = ` Salário Bruto: ${salario || output}
   <br /> 
-  IR:${calcularDesconto}
+  IR:${calcularDesconto || output}
   <br />
-  INSS: ${descontInss}
+  INSS: ${descontInss || output}
   <br /> 
-  FGTS: ${descontFgts}
+  FGTS: ${descontFgts || output}
   <br /> 
-  Total de descontos : ${descontosTotal}
+  Total de descontos : ${descontosTotal || output}
   <br />
-  Salário Liquido : ${pagamento}
+  Salário Liquido : ${pagamento || output}
   `;
 }
