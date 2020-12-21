@@ -34,7 +34,7 @@ function descontoIr(
   descFgts
 ) {
   if (salario <= 900) {
-    criarElemento(salario);
+    criarElemento();
   } else if (salario > 900 && salario <= 1500) {
     let calcularDesconto = Number(des1500) * Number(salario);
     let descontInss = Number(descInss) * Number(salario);
@@ -95,7 +95,7 @@ function criarElemento(
   pagamento
 ) {
   let resposta = document.getElementById("res");
-  let output = "Não tera descontos";
+  let output = "Não tera calculos";
   resposta.innerHTML = ` Salário Bruto: ${salario || output}
   <br /> 
   IR:${calcularDesconto || output}
