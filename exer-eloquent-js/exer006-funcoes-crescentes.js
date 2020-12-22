@@ -15,3 +15,16 @@ function gados(vacas, galinhas, porcos) {
 }
 
 gados(7, 3, 11);
+
+// funcoes argumentos opcionais
+
+// function potencial(base, expoente) {
+//   if (expoente == undefined) {
+//     expoente = 2;
+//   }
+//   let resultado = 1;
+//   for (i = 0; i < expoente; i++) {
+//     resultado *= base;
+//   }
+//   return resultado;
+// }
