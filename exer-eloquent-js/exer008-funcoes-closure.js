@@ -35,3 +35,26 @@ function minhaBiblioteca() {
 
 console.log(minhaBiblioteca.add5());
 console.log(minhaBiblioteca.add10());
+
+function minhaBiblioteca() {
+  let nome = "Gabriel";
+
+  function auxiliar(name) {
+    if (name == "Gabriel") {
+      console.log("nome e de acordo");
+    }
+    return name;
+  }
+  return {
+    add5() {
+      return auxiliar(nome);
+    },
+    add10() {
+      return auxiliar(nome);
+    },
+  };
+}
+
+let biblioteca = minhaBiblioteca();
+biblioteca.add5();
+biblioteca.add10();
