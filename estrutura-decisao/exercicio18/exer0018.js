@@ -3,7 +3,7 @@ function verificarData() {
   let mes = document.getElementById("mes").value;
   let ano = document.getElementById("ano").value;
 
-  if (dia <= 31 || mes <= 12) {
+  if (dia <= 31 && mes <= 12) {
     console.log("data valida");
   } else if (dia > 31 || mes > 12 || ano < 0) {
     console.log("data invalida");

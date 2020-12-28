@@ -3,7 +3,6 @@ function validarNota() {
   let matematica = document.getElementById("matematica").value;
   let ingles = document.getElementById("ingles").value;
   let media = (Number(portugues) + Number(matematica) + Number(ingles)) / 3;
-  console.log(media);
   if (media > 7 && media <= 10) {
     console.log("aprovado");
   } else if (media <= 7) {
