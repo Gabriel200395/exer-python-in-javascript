@@ -32,7 +32,7 @@ if (fruta === "maçã" && quilo <= 5) {
 } else if (fruta === "maçã" && quilo > 5) {
   let desconto = 0.1;
   let precoAumento = quilo * maca5kgAcima;
-  let total = precoAumento - desconto;
+  let total = precoAumento - precoAumento * desconto;
   console.log(
     " O preco total a pagar " +
       total.toLocaleString("pt-BR", {
@@ -44,7 +44,7 @@ if (fruta === "maçã" && quilo <= 5) {
 } else if (fruta === "morango" && quilo > 5) {
   let desconto = 0.1;
   let precoAumento = quilo * morango5kgAcima;
-  let total = precoAumento - desconto;
+  let total = precoAumento - precoAumento * desconto;
   console.log(
     "O preco total a pagar" +
       total.toLocaleString("pt-BR", {

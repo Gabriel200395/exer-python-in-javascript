@@ -34,7 +34,7 @@ function calcularPreco() {
 function desconto(valorTotal, tipoPagamento) {
   let desconto = 0.5;
   if (tipoPagamento === "sim") {
-    let descontoComprar = valorTotal - desconto;
+    let descontoComprar = valorTotal - valorTotal * desconto;
     cupomFiscal(valorTotal, tipoPagamento, desconto, descontoComprar);
   } else {
     cupomSem(valorTotal);
@@ -45,17 +45,29 @@ function desconto(valorTotal, tipoPagamento) {
 function cupomFiscal(valorTotal, tipoPagamento, desconto, descontoComprar) {
   let resposta = document.getElementById("res");
   let output = "nao teve desconto";
-  resposta.innerHTML = `<li>valor total da comprar:${valorTotal}</li> 
-  <br/><li>${tipoPagamento}</li> 
+  resposta.innerHTML = `<li>valor total da comprar:${valorTotal.toLocaleString(
+    "pt-BR",
+    {
+      style: "currency",
+      currency: "BRL",
+    }
+  )}</li> 
+  <br/><li>O tipo do pagamento vai ser no cartão tabajara: ${tipoPagamento}</li> 
   <br/>
-  <li>${desconto}</li> 
+  <li>você teve um desconto de: ${desconto}</li> 
   <br/>
-  <li>${descontoComprar}</li> 
+  <li>valor para pagar: ${descontoComprar.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  })}</li> 
   `;
 }
 
 function cupomSem(valorTotal) {
   let resposta = document.getElementById("res");
-  resposta.innerHTML = `<li>valor total :${valorTotal}</li> 
+  resposta.innerHTML = `<li>valor total :${valorTotal.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  })}</li> 
   `;
 }
