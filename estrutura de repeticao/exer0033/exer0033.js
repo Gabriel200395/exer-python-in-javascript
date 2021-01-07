@@ -1,4 +1,4 @@
-let previsaiTempo = [
+let previsaoTempo = [
   { cidade: "brasilia", temperatura: 60 },
   { cidade: "São-paulo", temperatura: 80 },
   { cidade: "Goiania", temperatura: 3 },
@@ -6,14 +6,14 @@ let previsaiTempo = [
 ];
 
 function minMaxTempo(mostrarTempo) {
-  let min = previsaiTempo.reduce((tempMin, elTemp) => {
+  let min = previsaoTempo.reduce((tempMin, elTemp) => {
     if (elTemp.temperatura < tempMin.temperatura) {
       tempMin = elTemp;
     }
     return tempMin;
   });
 
-  let max = previsaiTempo.reduce((tempMax, elTemp) => {
+  let max = previsaoTempo.reduce((tempMax, elTemp) => {
     if (elTemp.temperatura > tempMax.temperatura) {
       tempMax = elTemp;
     }
@@ -32,16 +32,28 @@ function mostrarTempo(temperaturaMinima, temperaturaMaxima) {
 
 function somarTempo(mediaTempo) {
   let resultado = 0;
-  for (pos in previsaiTempo) {
-    resultado += previsaiTempo[pos].temperatura;
+  for (pos in previsaoTempo) {
+    resultado += previsaoTempo[pos].temperatura;
   }
   return mediaTempo(resultado);
 }
 
 function mediaTempo(resultado) {
-  let medio = resultado / previsaiTempo.length;
+  let medio = resultado / previsaoTempo.length;
   console.log(" A media de temperatura no pais " + medio);
 }
 
 minMaxTempo(mostrarTempo);
 somarTempo(mediaTempo);
+
+// let previsaoTempo = [
+//   { cidade: "brasilia", temperatura: 60 },
+//   { cidade: "São-paulo", temperatura: 80 },
+//   { cidade: "Goiania", temperatura: 3 },
+//   { cidade: "Belém", temperatura: 30 },
+// ];
+// previsaoTempo.sort((a, b) => (a.temperatura > b.temperatura ? 1 : -1));
+// let menorValor = previsaoTempo[0];
+// let maiorValor = previsaoTempo[previsaoTempo.length - 1];
+// console.log(maiorValor);
+// console.log(menorValor);
