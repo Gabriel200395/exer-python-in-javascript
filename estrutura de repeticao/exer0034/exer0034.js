@@ -6,4 +6,4 @@ function ehPrimo(a) {
   else console.log("É não primo");
 }
 
-ehPrimo(5);
+ehPrimo(1);
