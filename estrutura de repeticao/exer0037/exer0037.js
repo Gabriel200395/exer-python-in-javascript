@@ -24,7 +24,7 @@ function montarTabela(tabela) {
       element.nome +
       " altura " +
       element.altura +
-      " peso" +
+      " peso " +
       element.peso
     }`;
     resposta.appendChild(elemento);
