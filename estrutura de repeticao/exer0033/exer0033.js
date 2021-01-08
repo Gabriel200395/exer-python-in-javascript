@@ -45,15 +45,3 @@ function mediaTempo(resultado) {
 
 minMaxTempo(mostrarTempo);
 somarTempo(mediaTempo);
-
-// let previsaoTempo = [
-//   { cidade: "brasilia", temperatura: 60 },
-//   { cidade: "São-paulo", temperatura: 80 },
-//   { cidade: "Goiania", temperatura: 3 },
-//   { cidade: "Belém", temperatura: 30 },
-// ];
-// previsaoTempo.sort((a, b) => (a.temperatura > b.temperatura ? 1 : -1));
-// let menorValor = previsaoTempo[0];
-// let maiorValor = previsaoTempo[previsaoTempo.length - 1];
-// console.log(maiorValor);
-// console.log(menorValor);
