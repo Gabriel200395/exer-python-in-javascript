@@ -1,8 +1,12 @@
 let academia = [];
 
 function adicionarPesoAltura(nome, altura, peso) {
-  academia.push({ nome, altura, peso });
-  tabelaDeAlturaPeso(academia, montarTabela);
+  if (nome.length == " " || nome.length == " " || nome.length == " ") {
+    alert("preenchar os campos");
+  } else {
+    academia.push({ nome, altura, peso });
+    tabelaDeAlturaPeso(academia, montarTabela);
+  }
 }
 
 function tabelaDeAlturaPeso(array, montarTabela) {
