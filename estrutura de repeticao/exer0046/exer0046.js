@@ -46,6 +46,11 @@ function calcularMediaSaltos(maior, menor, pulosAtleta) {
       " m " +
       " de salto media: " +
       media +
+      " m " +
+      " Resultado final " +
+      menor.nome +
+      ":" +
+      media +
       " m "
   );
 
