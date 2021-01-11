@@ -10,7 +10,7 @@ function adicionarPesoAltura(nome, altura, peso) {
 }
 
 function tabelaDeAlturaPeso(array, montarTabela) {
-  array.sort((a, b) => (a.altura < b.altura || a.peso < b.peso ? 1 : -1));
+  array.sort((a, b) => (a.altura < b.altura ? 1 : -1));
   return montarTabela(array);
 }
 
