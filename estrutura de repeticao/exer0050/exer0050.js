@@ -4,7 +4,7 @@ let total = 0;
 let n = 0;
 for (count = isInicio; count <= hasFim; count += 2) {
   n += 1;
-  total += n;
+  total += n + count;
   console.log(n + "/" + count);
 }
 console.log("A soma dos termos e: " + total);
