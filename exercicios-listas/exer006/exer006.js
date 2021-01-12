@@ -8,7 +8,6 @@ let array = [];
 
 let total = (nota1 + nota2 + nota3 + nota4) / 4;
 array.push(total);
-console.log(total);
 
 let alunoMaiorMedia = array.filter((el) => el > 7);
 console.log(alunoMaiorMedia);
